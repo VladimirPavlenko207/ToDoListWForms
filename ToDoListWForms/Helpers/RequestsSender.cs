@@ -12,7 +12,7 @@ namespace ToDoListWForms.Helpers
         /// Выполнение запроса клиентом
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        /// <param name="methodCode">целочисленное представление метода из "Method"</param>
+        /// <param name="methodCode">целочисленное представление метода из <see cref="Method"/></param>
         /// <param name="url">Путь</param>
         /// <param name="obj">Объект для отправки запроса</param>
         /// <returns>Возаращает объект "IRestResponse"</returns>
@@ -31,7 +31,7 @@ namespace ToDoListWForms.Helpers
         /// <summary>
         /// /// Выполнение запроса клиентом
         /// </summary>
-        /// <param name="methodCode">целочисленное представление метода из <a href="C:\Users\edvar\.nuget\packages\restsharp\106.12.0\lib\netstandard2.0\RestSharp.dll">Method</a></param>
+        /// <param name="methodCode">целочисленное представление метода из <see cref="Method"/></param>
         /// <param name="url">Путь</param>
         /// <returns>Возаращает объект "IRestResponse"</returns>
         public static IRestResponse ClientExecuter(int methodCode, string url)

@@ -22,7 +22,7 @@ namespace ToDoListWForms.Models.Requests
         /// </summary>
         public string Description { get; set; }
         /// <summary>
-        /// Приоритет задачи выраженное целым числом
+        /// Приоритет задачи выраженное целым числом из <see cref="ThreadPriority"/>
         /// </summary>
         public int Priority { get; set; }
         /// <summary>
