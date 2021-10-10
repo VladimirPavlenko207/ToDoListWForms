@@ -62,6 +62,9 @@ namespace ToDoListWForms
             comboBoxCategorys.Enabled = v5;
         }
 
+        /// <summary>
+        /// Главное окно приложения
+        /// </summary>
         public MainForm()
         {
             InitializeComponent();

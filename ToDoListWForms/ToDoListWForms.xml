@@ -1,0 +1,250 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ToDoListWForms</name>
+    </assembly>
+    <members>
+        <member name="T:ToDoListWForms.Enums.Operations">
+            <summary>
+            Определяет вид операции
+            </summary>
+        </member>
+        <member name="F:ToDoListWForms.Enums.Operations.Add">
+            <summary>
+            Операция добавления
+            </summary>
+        </member>
+        <member name="F:ToDoListWForms.Enums.Operations.Edit">
+            <summary>
+            Операция редактирования
+            </summary>
+        </member>
+        <member name="F:ToDoListWForms.Enums.Operations.Remove">
+            <summary>
+            Операция удаления
+            </summary>
+        </member>
+        <member name="F:ToDoListWForms.Enums.Operations.None">
+            <summary>
+            Операция бездействия
+            </summary>
+        </member>
+        <member name="T:ToDoListWForms.Helpers.RequestsSender">
+            <summary>
+            Статический класс для работы по отправке запросов
+            </summary>
+        </member>
+        <member name="M:ToDoListWForms.Helpers.RequestsSender.ClientExecuter``1(System.Int32,System.String,``0)">
+            <summary>
+            Выполнение запроса клиентом
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="methodCode">целочисленное представление метода из "Method"</param>
+            <param name="url">Путь</param>
+            <param name="obj">Объект для отправки запроса</param>
+            <returns>Возаращает объект "IRestResponse"</returns>
+        </member>
+        <member name="M:ToDoListWForms.Helpers.RequestsSender.ClientExecuter(System.Int32,System.String)">
+            <summary>
+            /// Выполнение запроса клиентом
+            </summary>
+            <param name="methodCode">целочисленное представление метода из <a href="C:\Users\edvar\.nuget\packages\restsharp\106.12.0\lib\netstandard2.0\RestSharp.dll">Method</a></param>
+            <param name="url">Путь</param>
+            <returns>Возаращает объект "IRestResponse"</returns>
+        </member>
+        <member name="M:ToDoListWForms.Helpers.RequestsSender.GetDeserializedObject``1(``0,System.String)">
+            <summary>
+            Получает десериализованный json объект
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj">Объект для определения типа объекта </param>
+            <param name="json">Строка json</param>
+            <returns>Десериализованный объект Т типа</returns>
+        </member>
+        <member name="T:ToDoListWForms.MainForm">
+            <summary>
+            Работа с метками
+            </summary>
+        </member>
+        <member name="M:ToDoListWForms.MainForm.#ctor">
+            <summary>
+            Главное окно приложения
+            </summary>
+        </member>
+        <member name="M:ToDoListWForms.MainForm.LengthLimitation(System.String,System.Int32)">
+            <summary>
+            Ограничение длинны строки до n
+            </summary>
+            <param name="str"></param>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+        <member name="F:ToDoListWForms.MainForm.components">
+            <summary>
+             Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ToDoListWForms.MainForm.Dispose(System.Boolean)">
+            <summary>
+             Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ToDoListWForms.MainForm.InitializeComponent">
+            <summary>
+             Required method for Designer support - do not modify
+             the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:ToDoListWForms.Models.Requests.CategoryRequestModel">
+            <summary>
+            Модель запросов категории
+            </summary>
+        </member>
+        <member name="P:ToDoListWForms.Models.Requests.CategoryRequestModel.Name">
+            <summary>
+            Имя категории
+            </summary>
+        </member>
+        <member name="P:ToDoListWForms.Models.Requests.CategoryRequestModel.NewName">
+            <summary>
+            Новое имя категории
+            </summary>
+        </member>
+        <member name="T:ToDoListWForms.Models.Requests.TagRequestModel">
+            <summary>
+            Модель запроса метки
+            </summary>
+        </member>
+        <member name="P:ToDoListWForms.Models.Requests.TagRequestModel.Name">
+            <summary>
+            Имя метки
+            </summary>
+        </member>
+        <member name="P:ToDoListWForms.Models.Requests.TagRequestModel.NewName">
+            <summary>
+            Новое имя метки
+            </summary>
+        </member>
+        <member name="T:ToDoListWForms.Models.Requests.TaskRequestModel">
+            <summary>
+            Модель запроса задачи
+            </summary>
+        </member>
+        <member name="P:ToDoListWForms.Models.Requests.TaskRequestModel.Id">
+            <summary>
+            Id задачи
+            </summary>
+        </member>
+        <member name="P:ToDoListWForms.Models.Requests.TaskRequestModel.Description">
+            <summary>
+            Описание задачи
+            </summary>
+        </member>
+        <member name="P:ToDoListWForms.Models.Requests.TaskRequestModel.Priority">
+            <summary>
+            Приоритет задачи выраженное целым числом
+            </summary>
+        </member>
+        <member name="P:ToDoListWForms.Models.Requests.TaskRequestModel.Deadline">
+            <summary>
+            Строковое представление конечной даты  
+            </summary>
+        </member>
+        <member name="P:ToDoListWForms.Models.Requests.TaskRequestModel.IsComplete">
+            <summary>
+            Логическое значение завершенности задачи
+            </summary>
+        </member>
+        <member name="P:ToDoListWForms.Models.Requests.TaskRequestModel.CategoryName">
+            <summary>
+            Имя категории задачи
+            </summary>
+        </member>
+        <member name="P:ToDoListWForms.Models.Requests.TaskRequestModel.TagsNames">
+            <summary>
+            Список имен меток для задачи
+            </summary>
+        </member>
+        <member name="T:ToDoListWForms.Models.Responses.CategoryResponseModel">
+            <summary>
+            Модель получения категории
+            </summary>
+        </member>
+        <member name="P:ToDoListWForms.Models.Responses.CategoryResponseModel.Id">
+            <summary>
+            Id категории
+            </summary>
+        </member>
+        <member name="P:ToDoListWForms.Models.Responses.CategoryResponseModel.Name">
+            <summary>
+            Имя категории
+            </summary>
+        </member>
+        <member name="T:ToDoListWForms.Models.Responses.TagResponseModel">
+            <summary>
+            Модель получения метки
+            </summary>
+        </member>
+        <member name="P:ToDoListWForms.Models.Responses.TagResponseModel.Id">
+            <summary>
+            Id метки
+            </summary>
+        </member>
+        <member name="P:ToDoListWForms.Models.Responses.TagResponseModel.Name">
+            <summary>
+            Имя метки
+            </summary>
+        </member>
+        <member name="P:ToDoListWForms.Models.Responses.TagResponseModel.Tasks">
+            <summary>
+            Список задач данной метки
+            </summary>
+        </member>
+        <member name="T:ToDoListWForms.Models.Responses.TaskResponseModel">
+            <summary>
+            Модель получения задачи
+            </summary>
+        </member>
+        <member name="P:ToDoListWForms.Models.Responses.TaskResponseModel.Id">
+            <summary>
+            Id задачи
+            </summary>
+        </member>
+        <member name="P:ToDoListWForms.Models.Responses.TaskResponseModel.Description">
+            <summary>
+            Описание задачи
+            </summary>
+        </member>
+        <member name="P:ToDoListWForms.Models.Responses.TaskResponseModel.Priority">
+            <summary>
+            Приоритет задачи
+            </summary>
+        </member>
+        <member name="P:ToDoListWForms.Models.Responses.TaskResponseModel.Deadline">
+            <summary>
+            Конечная дата завершения задачи
+            </summary>
+        </member>
+        <member name="P:ToDoListWForms.Models.Responses.TaskResponseModel.IsComplete">
+            <summary>
+            Завершена ли задача
+            </summary>
+        </member>
+        <member name="P:ToDoListWForms.Models.Responses.TaskResponseModel.Category">
+            <summary>
+            Категория задачи
+            </summary>
+        </member>
+        <member name="P:ToDoListWForms.Models.Responses.TaskResponseModel.Tags">
+            <summary>
+            Список меток данной задачи
+            </summary>
+        </member>
+        <member name="M:ToDoListWForms.Program.Main">
+            <summary>
+             The main entry point for the application.
+            </summary>
+        </member>
+    </members>
+</doc>

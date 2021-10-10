@@ -11,6 +11,9 @@ using ToDoListWForms.Models.Responses;
 
 namespace ToDoListWForms
 {
+    /// <summary>
+    /// Работа с метками
+    /// </summary>
     public partial class MainForm : Form
     {
         private Operations tagMode;
