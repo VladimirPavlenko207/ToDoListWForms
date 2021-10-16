@@ -39,10 +39,11 @@ namespace ToDoListWForms
             this.labelTags = new System.Windows.Forms.Label();
             this.comboBoxTags = new System.Windows.Forms.ComboBox();
             this.buttonAddTag = new System.Windows.Forms.Button();
-            this.buttonDeleteTag = new System.Windows.Forms.Button();
+            this.buttonRemoveTag = new System.Windows.Forms.Button();
             this.buttonEditTag = new System.Windows.Forms.Button();
             this.textBoxTag = new System.Windows.Forms.TextBox();
-            this.buttonDeleteCategory = new System.Windows.Forms.Button();
+            this.buttonRemoveCategory = new System.Windows.Forms.Button();
+            this.buttonUpDate = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,7 +75,6 @@ namespace ToDoListWForms
             this.tableLayoutPanelBottom = new System.Windows.Forms.TableLayoutPanel();
             this.radioButtonViewTask = new System.Windows.Forms.RadioButton();
             this.buttonDeleteTask = new System.Windows.Forms.Button();
-            this.buttonUpDate = new System.Windows.Forms.Button();
             this.panelMain.SuspendLayout();
             this.tableLayoutPanelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -110,10 +110,10 @@ namespace ToDoListWForms
             this.tableLayoutPanelMain.Controls.Add(this.labelTags, 0, 2);
             this.tableLayoutPanelMain.Controls.Add(this.comboBoxTags, 1, 2);
             this.tableLayoutPanelMain.Controls.Add(this.buttonAddTag, 2, 2);
-            this.tableLayoutPanelMain.Controls.Add(this.buttonDeleteTag, 3, 2);
+            this.tableLayoutPanelMain.Controls.Add(this.buttonRemoveTag, 3, 2);
             this.tableLayoutPanelMain.Controls.Add(this.buttonEditTag, 4, 2);
             this.tableLayoutPanelMain.Controls.Add(this.textBoxTag, 5, 2);
-            this.tableLayoutPanelMain.Controls.Add(this.buttonDeleteCategory, 3, 1);
+            this.tableLayoutPanelMain.Controls.Add(this.buttonRemoveCategory, 3, 1);
             this.tableLayoutPanelMain.Controls.Add(this.buttonUpDate, 1, 0);
             this.tableLayoutPanelMain.Location = new System.Drawing.Point(27, 3);
             this.tableLayoutPanelMain.Name = "tableLayoutPanelMain";
@@ -203,15 +203,15 @@ namespace ToDoListWForms
             this.buttonAddTag.UseVisualStyleBackColor = true;
             this.buttonAddTag.Click += new System.EventHandler(this.buttonAddTag_Click);
             // 
-            // buttonDeleteTag
+            // buttonRemoveTag
             // 
-            this.buttonDeleteTag.Location = new System.Drawing.Point(292, 73);
-            this.buttonDeleteTag.Name = "buttonDeleteTag";
-            this.buttonDeleteTag.Size = new System.Drawing.Size(42, 28);
-            this.buttonDeleteTag.TabIndex = 0;
-            this.buttonDeleteTag.Text = "-";
-            this.buttonDeleteTag.UseVisualStyleBackColor = true;
-            this.buttonDeleteTag.Click += new System.EventHandler(this.buttonDeleteTag_Click);
+            this.buttonRemoveTag.Location = new System.Drawing.Point(292, 73);
+            this.buttonRemoveTag.Name = "buttonDeleteTag";
+            this.buttonRemoveTag.Size = new System.Drawing.Size(42, 28);
+            this.buttonRemoveTag.TabIndex = 0;
+            this.buttonRemoveTag.Text = "-";
+            this.buttonRemoveTag.UseVisualStyleBackColor = true;
+            this.buttonRemoveTag.Click += new System.EventHandler(this.buttonRemoveTag_Click);
             // 
             // buttonEditTag
             // 
@@ -232,15 +232,25 @@ namespace ToDoListWForms
             this.textBoxTag.TabIndex = 2;
             this.textBoxTag.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxTag_KeyDown);
             // 
-            // buttonDeleteCategory
+            // buttonRemoveCategory
             // 
-            this.buttonDeleteCategory.Location = new System.Drawing.Point(292, 39);
-            this.buttonDeleteCategory.Name = "buttonDeleteCategory";
-            this.buttonDeleteCategory.Size = new System.Drawing.Size(42, 28);
-            this.buttonDeleteCategory.TabIndex = 3;
-            this.buttonDeleteCategory.Text = "-";
-            this.buttonDeleteCategory.UseVisualStyleBackColor = true;
-            this.buttonDeleteCategory.Click += new System.EventHandler(this.buttonDeleteCategory_Click);
+            this.buttonRemoveCategory.Location = new System.Drawing.Point(292, 39);
+            this.buttonRemoveCategory.Name = "buttonDeleteCategory";
+            this.buttonRemoveCategory.Size = new System.Drawing.Size(42, 28);
+            this.buttonRemoveCategory.TabIndex = 3;
+            this.buttonRemoveCategory.Text = "-";
+            this.buttonRemoveCategory.UseVisualStyleBackColor = true;
+            this.buttonRemoveCategory.Click += new System.EventHandler(this.buttonRemoveCategory_Click);
+            // 
+            // buttonUpDate
+            // 
+            this.buttonUpDate.Location = new System.Drawing.Point(91, 3);
+            this.buttonUpDate.Name = "buttonUpDate";
+            this.buttonUpDate.Size = new System.Drawing.Size(147, 29);
+            this.buttonUpDate.TabIndex = 4;
+            this.buttonUpDate.Text = "Обновить";
+            this.buttonUpDate.UseVisualStyleBackColor = true;
+            this.buttonUpDate.Click += new System.EventHandler(this.buttonUpDate_Click);
             // 
             // dataGridView1
             // 
@@ -473,7 +483,7 @@ namespace ToDoListWForms
             this.buttonRightRemoveTag.TabIndex = 6;
             this.buttonRightRemoveTag.Text = "-";
             this.buttonRightRemoveTag.UseVisualStyleBackColor = true;
-            this.buttonRightRemoveTag.Click += new System.EventHandler(this.buttonLeftRemoveTag_Click);
+            this.buttonRightRemoveTag.Click += new System.EventHandler(this.buttonRightRemoveTag_Click);
             // 
             // buttonRightAddTag
             // 
@@ -483,7 +493,7 @@ namespace ToDoListWForms
             this.buttonRightAddTag.TabIndex = 6;
             this.buttonRightAddTag.Text = "+";
             this.buttonRightAddTag.UseVisualStyleBackColor = true;
-            this.buttonRightAddTag.Click += new System.EventHandler(this.buttonleftAddTag_Click);
+            this.buttonRightAddTag.Click += new System.EventHandler(this.buttonRightAddTag_Click);
             // 
             // labelRightTags
             // 
@@ -506,7 +516,7 @@ namespace ToDoListWForms
             this.comboBoxRightTags.Name = "comboBoxRightTags";
             this.comboBoxRightTags.Size = new System.Drawing.Size(135, 28);
             this.comboBoxRightTags.TabIndex = 7;
-            this.comboBoxRightTags.SelectedIndexChanged += new System.EventHandler(this.comboBoxLeftTags_SelectedIndexChanged);
+            this.comboBoxRightTags.SelectedIndexChanged += new System.EventHandler(this.comboBoxRightTags_SelectedIndexChanged);
             // 
             // listBoxRightTags
             // 
@@ -606,17 +616,7 @@ namespace ToDoListWForms
             this.buttonDeleteTask.TabIndex = 2;
             this.buttonDeleteTask.Text = "Удалить задачу";
             this.buttonDeleteTask.UseVisualStyleBackColor = true;
-            this.buttonDeleteTask.Click += new System.EventHandler(this.buttonDeleteTask_Click);
-            // 
-            // buttonUpDate
-            // 
-            this.buttonUpDate.Location = new System.Drawing.Point(91, 3);
-            this.buttonUpDate.Name = "buttonUpDate";
-            this.buttonUpDate.Size = new System.Drawing.Size(147, 29);
-            this.buttonUpDate.TabIndex = 4;
-            this.buttonUpDate.Text = "Обновить";
-            this.buttonUpDate.UseVisualStyleBackColor = true;
-            this.buttonUpDate.Click += new System.EventHandler(this.buttonUpDate_Click);
+            this.buttonDeleteTask.Click += new System.EventHandler(this.buttonRemoveTask_Click);
             // 
             // MainForm
             // 
@@ -630,6 +630,7 @@ namespace ToDoListWForms
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Список задач";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.panelMain.ResumeLayout(false);
             this.tableLayoutPanelMain.ResumeLayout(false);
             this.tableLayoutPanelMain.PerformLayout();
@@ -647,43 +648,43 @@ namespace ToDoListWForms
         #endregion
 
         private System.Windows.Forms.Panel panelMain;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        internal System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label labelCategorys;
         private System.Windows.Forms.Panel panelRight;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelMain;
-        private System.Windows.Forms.Button buttonAddCategory;
-        private System.Windows.Forms.ComboBox comboBoxCategorys;
-        private System.Windows.Forms.Button buttonDeleteTag;
-        private System.Windows.Forms.TextBox textBoxCategory;
-        private System.Windows.Forms.Button buttonEditCategory;
+        internal System.Windows.Forms.Button buttonAddCategory;
+        internal System.Windows.Forms.ComboBox comboBoxCategorys;
+        internal System.Windows.Forms.Button buttonRemoveTag;
+        internal System.Windows.Forms.TextBox textBoxCategory;
+        internal System.Windows.Forms.Button buttonEditCategory;
         private System.Windows.Forms.Label labelRightCat;
         private System.Windows.Forms.Label labelRightPrior;
         private System.Windows.Forms.Label labelRightDeadline;
         private System.Windows.Forms.Label labelRightState;
-        private System.Windows.Forms.TextBox textBoxRightTask;
-        private System.Windows.Forms.ComboBox comboBoxRightCat;
-        private System.Windows.Forms.ComboBox comboBoxRightPrior;
-        private System.Windows.Forms.DateTimePicker dateTimePickerRightDeadline;
-        private System.Windows.Forms.Button buttonSaveTask;
-        private System.Windows.Forms.RadioButton radioButtonEditTask;
-        private System.Windows.Forms.RadioButton radioButtonAddTask;
+        internal System.Windows.Forms.TextBox textBoxRightTask;
+        internal System.Windows.Forms.ComboBox comboBoxRightCat;
+        internal System.Windows.Forms.ComboBox comboBoxRightPrior;
+        internal System.Windows.Forms.DateTimePicker dateTimePickerRightDeadline;
+        internal System.Windows.Forms.Button buttonSaveTask;
+        internal System.Windows.Forms.RadioButton radioButtonEditTask;
+        internal System.Windows.Forms.RadioButton radioButtonAddTask;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelBottom;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelRight;
-        private System.Windows.Forms.ComboBox comboBoxRightState;
-        private System.Windows.Forms.RadioButton radioButtonViewTask;
-        private System.Windows.Forms.Button buttonDeleteTask;
+        internal System.Windows.Forms.ComboBox comboBoxRightState;
+        internal System.Windows.Forms.RadioButton radioButtonViewTask;
+        internal System.Windows.Forms.Button buttonDeleteTask;
         private System.Windows.Forms.Label labelTags;
-        private System.Windows.Forms.ComboBox comboBoxTags;
+        internal System.Windows.Forms.ComboBox comboBoxTags;
         private System.Windows.Forms.Label labelCurrentTask;
-        private System.Windows.Forms.Button buttonAddTag;
-        private System.Windows.Forms.Button buttonEditTag;
-        private System.Windows.Forms.TextBox textBoxTag;
-        private System.Windows.Forms.Button buttonDeleteCategory;
-        private System.Windows.Forms.ComboBox comboBoxRightTags;
-        private System.Windows.Forms.Button buttonRightAddTag;
-        private System.Windows.Forms.Button buttonRightRemoveTag;
+        internal System.Windows.Forms.Button buttonAddTag;
+        internal System.Windows.Forms.Button buttonEditTag;
+        internal System.Windows.Forms.TextBox textBoxTag;
+        internal System.Windows.Forms.Button buttonRemoveCategory;
+        internal System.Windows.Forms.ComboBox comboBoxRightTags;
+        internal System.Windows.Forms.Button buttonRightAddTag;
+        internal System.Windows.Forms.Button buttonRightRemoveTag;
         private System.Windows.Forms.Label labelRightTags;
-        private System.Windows.Forms.ListBox listBoxRightTags;
+        internal System.Windows.Forms.ListBox listBoxRightTags;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;

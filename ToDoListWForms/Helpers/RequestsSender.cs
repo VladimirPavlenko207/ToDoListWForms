@@ -15,7 +15,7 @@ namespace ToDoListWForms.Helpers
         /// <param name="methodCode">целочисленное представление метода из <see cref="Method"/></param>
         /// <param name="url">Путь</param>
         /// <param name="obj">Объект для отправки запроса</param>
-        /// <returns>Возаращает объект "IRestResponse"</returns>
+        /// <returns>Возаращает объект <see cref="IRestResponse"/></returns>
         public static IRestResponse ClientExecuter<T>(int methodCode, string url, T obj) where T : class
         {
             var json = obj.ToString() == string.Empty ? null : JsonConvert.SerializeObject(obj);
@@ -33,7 +33,7 @@ namespace ToDoListWForms.Helpers
         /// </summary>
         /// <param name="methodCode">целочисленное представление метода из <see cref="Method"/></param>
         /// <param name="url">Путь</param>
-        /// <returns>Возаращает объект "IRestResponse"</returns>
+        /// <returns>Возаращает объект <see cref="IRestResponse"/></returns>
         public static IRestResponse ClientExecuter(int methodCode, string url)
         {
             return ClientExecuter(methodCode, url, string.Empty);
@@ -48,7 +48,7 @@ namespace ToDoListWForms.Helpers
         /// <returns>Десериализованный объект Т типа</returns>
         public static T GetDeserializedObject<T>(T obj , string json)
         {
-            return JsonConvert.DeserializeObject<T>(json);
+           return JsonConvert.DeserializeObject<T>(json);
         }
     }
 }
